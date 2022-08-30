@@ -30,7 +30,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from PIL import Image
-image = Image.open('D:/logo.PNG')
+image = Image.open('logo.PNG')
 
 st.image(image)
 
@@ -39,7 +39,7 @@ st.write(""" ### Hybrid Music Recommendation System """)
 
 
 def get_data():
-    path = "D:/model2.csv"
+    path = "model2.csv"
     return pd.read_csv(path)
 
 dataget = get_data()
@@ -73,7 +73,7 @@ st.write("---")
 
 st.write(""" ### Model 1 -  Popularity Recommendation""")
 # model one dataset
-data = pd.read_csv("D:/model1.csv")
+data = pd.read_csv("model1.csv")
 
 #model one recommendation
 def create_popularity_recommendation(data, user_id, song_id, n=10):
@@ -102,7 +102,7 @@ st.markdown("""---""")
 st.write(""" ### Model 2 -  # Collaborative filtering Recommendation""")
 
 # model three dataset
-data2 = pd.read_csv("D:/model2.csv")
+data2 = pd.read_csv("model2.csv")
 
 
 Xcol = data2.iloc[0:,[12,13,14,15,16]]
@@ -144,7 +144,7 @@ st.markdown("""---""")
 st.write(""" ### Model 2 -  # Content-Based Recommendation""")
 
 # model three dataset
-data3 = pd.read_csv("D:/model3.csv")
+data3 = pd.read_csv("model3.csv")
 
 #model 3
 tfidf_cb = TfidfVectorizer(analyzer='word', stop_words='english')
