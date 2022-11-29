@@ -141,7 +141,7 @@ recommend(int(songid),4)
 
 
 st.markdown("""---""")
-st.write(""" ### Model 2 -  # Content-Based Recommendation""")
+st.write(""" ### Model 3 -  # Content-Based Recommendation""")
 
 # model three dataset
 data3 = pd.read_csv("model3.csv")
